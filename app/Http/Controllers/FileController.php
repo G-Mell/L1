@@ -20,6 +20,10 @@ class FileController extends Controller
         Excel::import(new ZhurnalImport, public_path('files/').$fileName);
         return response()->json(['file' => $fileName]);
     }
+    public function table()
+    {
+        return view('table');
+    }
 //     public function import(Request $request, String $fileName)
 //     {
 

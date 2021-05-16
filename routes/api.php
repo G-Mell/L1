@@ -17,3 +17,7 @@ Route::post('/files', [App\Http\Controllers\FileController::class, 'store'])->na
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::middleware('api')->group(function () {
+
+    Route::resource('zhurnals', App\Http\Controllers\ZhurnalController::class);
+});

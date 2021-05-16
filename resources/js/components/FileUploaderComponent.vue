@@ -41,6 +41,8 @@ export default {
         this.fileName = response.file;
     },
     uploadError(file, message) {
+        if()
+        alert("Модальное окно:\nОшибка! Подходит только эксель!");
         console.log(file);
         console.log('An Error Occurred');
         console.log(message)
